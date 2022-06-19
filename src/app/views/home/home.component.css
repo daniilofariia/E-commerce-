@@ -1,0 +1,32 @@
+.home .title{
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.home .subtitle{
+    font-size: 1rem;
+
+}
+body{
+    overflow-x: hidden;
+color: #000;
+
+
+}
+.preto{
+    color: #000;
+background-color: aqua
+;}
+
+.fixed{
+    position: fixed;
+}
+.block{
+    display: block;
+}
+.top{
+    padding-top: 5rem;
+    margin: auto;
+    display: block;
+   
+}

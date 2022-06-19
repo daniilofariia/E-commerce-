@@ -1,0 +1,54 @@
+<form>
+
+    <div class="form-group">
+        <h2 class="login"> Login no sistema </h2></div>
+    
+    <div class="form-group">  
+        <label for="login">E-mail:</label>
+        <input  id="login"  type="email" class="form-control" #email="ngModel" [(ngModel)]="clientes.email" name="login" ><br><br>
+       <div *ngIf="email.valid" class=" alert alert-danger">
+          Digite seu email e senha valido
+       </div>
+    
+    </div>
+        <label> Senha:</label>
+        <input id="senha" type="password" class="form-control" #senha="ngModel" id="senha" [(ngModel)]="clientes.cpf" placeholder="senha" name="senha" ><br><br>
+        <div *ngIf="senha.valid" class="alert alert-danger">
+            senha deve ser informada
+        </div>
+        
+    
+                <button mat-raised-button color="primary" [disabled]="email.invalid // senha.invalid "  onclick="logar()" type="submit" value="Login" name="f_btn_enviar" > Acessar </button>  <br><br>
+             
+    
+          <button mat-raised-button class="primary"  onclick="cadastro()" size="15px" > Cadastre-se <a href="trabalho 1.html" target=" " > Clique Aqui</a></button>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<h5> Login </h5>
+
+<div class="row">
+<div class="input-field col s12">
+    <input  id="usuario" type="text" class="validate">
+    <label class="active" for="usuario"> Usuario</label>
+</div>
+
+</div>-->

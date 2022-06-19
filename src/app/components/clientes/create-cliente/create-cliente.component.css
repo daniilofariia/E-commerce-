@@ -1,0 +1,20 @@
+.p{
+    display: block;
+  
+    margin-top: 400px;
+    margin-left: 400px;
+    font-size: 50px;
+}
+button{
+    margin-right: 15px;
+    display: inline-block;
+}
+mat-card{
+    margin-top: 6rem;
+    width: 50%;
+   
+  }
+  form mat-form-field{
+      display: block;
+   
+  }

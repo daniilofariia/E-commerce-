@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.red{
+    color: #ff0202b3
+}
+.v-middle{
+    vertical-align :middle;
+}
+
+.msg-sucess{
+    background-color: #28a745;
+    color:  #fff;
+}
+
+
+.msg-erro{
+    background-color: #f60303;
+    color:  #fff;
+}
+
+   
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid#57a942; /* green*/
+}
+
+.ng-invalid:not(form){
+    border-left: 5px solid#a94442; /* red*/
+}
+
+
+
+

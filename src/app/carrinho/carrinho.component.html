@@ -1,0 +1,46 @@
+<div class="empty" *ngIf="items.length < 1">
+<div class="info">
+ <h2> Você ainda não tem nenhum item no seu carrinho</h2>
+
+ <a routerLink="" class="btn btn-success"> Comece a fazer compras</a>
+</div>
+
+</div>
+<ng-container *ngIf="items.length > 0">
+<div class="carrinho" *ngFor="let item of items; let i = index">
+    <input type="checkbox" class="delete"
+    (click)="Deletaritem(i)"> 
+
+ 
+<div class="Caixadeimagem">
+    <img [src]="item.imagemUrls[0]" alt="" class="imagem">
+</div>
+<div class="descricao">
+    {{ item.descricao }}
+</div>
+
+<div class="preco">
+    {{ item.preco | currency: 'BRL' }}
+</div>
+<input type="number" class="quantidade"[value]="item.quantidade" (blur)="ValidarCompra($event, i)">
+<div class="Valortotal">
+    {{ item.preco * item.quantidade }}
+</div>
+</div>
+
+<div class="Subtotal">
+    <h1 class="center"> Resumo do Pedido</h1><br>
+    <div> Subtotal</div>
+    <b> {{ total | currency: 'BRL' }} </b>
+    <div>Enviar</div>
+    <b>R$ 0</b>
+    <div>Total</div>
+    <b> {{ total | currency: 'BRL' }} </b>
+    <a class="btn btn-success" routerLink="/pagamento"> Confirmar compra </a>
+    <button class="btn btn btn-deletar"(click)="Deletaritem" routerLink="produtos"> Continuar comprando </button>
+</div>
+
+</ng-container>
+
+
+

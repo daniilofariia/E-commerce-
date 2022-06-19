@@ -1,0 +1,10 @@
+.carrocel{
+  width: 50%;
+  padding-top: 2rem;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  transition: 1s ease;
+  }
+
+

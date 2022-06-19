@@ -1,0 +1,25 @@
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+
+    <div class="form-group">
+        <h2 class="login"> Logar no sistema </h2></div>
+    
+    <div class="form-group">  
+        <label for="login">E-mail:</label>
+        <input  id="login"  type="email" class="form-control" #email="ngModel" [(ngModel)]="login.email" name="login" required><br><br>
+       
+    
+    </div>
+        <label> Senha:</label>
+        <input id="senha" type="password" class="form-control"  [(ngModel)]="login.password" name="password" required ><br><br>
+       
+        
+    
+                <button mat-raised-button color="primary" [disabled]="form.form.invalid" onclick="logar()" type="submit" name="f_btn_enviar" > Acessar </button>  
+                
+             
+    
+          <button mat-raised-button class="primary"  onclick="cadastro()" size="15px" [routerLink]="['/create-account']" > Criar conta</button>
+    
+
+
+

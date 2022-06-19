@@ -1,0 +1,35 @@
+form{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+input{
+    padding: 5px;
+}
+button{
+    margin-right: 10px;
+}
+.atualizar{
+    background-color: rgb(249, 3, 3);
+    width: 6rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2rem;
+    color: #fff;
+    cursor: pointer;
+
+}
+.cancelar{
+    background-color: rgb(72, 72, 72);
+    width: 6rem;
+    height: 2rem;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 2rem;
+    color: #fff;
+    cursor: pointer;
+
+}

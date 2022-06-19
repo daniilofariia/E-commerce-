@@ -1,0 +1,66 @@
+.empty{
+    height: 4rem;
+    margin-top: 14rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}
+.carrinho{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.Caixadeimagem{flex: 0 0 6rem;
+    margin-top: 4rem;
+
+}
+.imagem{
+  width: 12rem;
+
+}
+.descricao{
+    flex: 1;
+     font-size: 1rem
+;}
+.quantidade{
+    width: 2rem;
+    text-align: center;
+}
+.Subtotal{
+    flex-basis: 100%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 8rem);
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+b{justify-content: end;
+}
+.btn{
+    grid-column: 1 / -1;
+}
+.delete{
+    
+    background-color: black;
+    display: flex;
+    margin-top: 3rem;
+    width: 1rem;
+    height: 1rem;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+.delete:hover{
+    background-color: red;
+    transition: 0.5s ease;
+}
+.btn-deletar{
+    color: #fff;
+    background-color: rgb(231, 6, 6);
+
+}

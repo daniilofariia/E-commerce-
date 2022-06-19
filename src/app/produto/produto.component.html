@@ -1,0 +1,22 @@
+<div class="row">
+
+    <div class="col-sm-12 col-md-2">
+<div class="images" *ngFor="let imagem of Produto.imagemUrls; let i = index" >
+<img [src]="imagem" (mouseenter)="displayedImg = i" alt="">
+</div>
+
+    </div>
+    <div class="col-sm-12 col-md-5">
+<img [src]="Produto.imagemUrls[displayedImg]" alt="" style="width:150% margin max-content">
+    </div>
+    <div class="col-sm-12 nome offset-md-1 col-md-4">
+        <h2 class="nome"> {{ Produto.nome }}</h2>
+        <h5 class="descricao"> {{ Produto.descricao }}</h5>
+        <h2 class="preco"> {{ Produto.preco | currency: 'BRL' }} </h2>
+        <button class="btn btn-success"(click)="adicionarAoCarrinho(Produto)"> Adicionar ao carrinho</button><br>
+        <button class="btn btn-danger Remover"(click)="LimparCarrinho(Produto)"> Limpar carrinho</button><br>
+        <a class="btn btn-danger Remover"(click)="vercarrinho(Produto)" routerLink="carrinho"> Ver carrinho</a>
+       
+    </div>
+</div>
+

@@ -1,0 +1,10 @@
+.escolha{
+    margin-top: 2rem;
+    height: 4rem;
+    margin-top: 14rem;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+}

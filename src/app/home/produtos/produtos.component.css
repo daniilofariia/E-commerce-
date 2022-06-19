@@ -1,0 +1,129 @@
+.titulo{
+    color: #000;
+    font-size: 16px;
+  }
+  .text2{
+    color: #f00;
+    font-size: 20px;
+    box-sizing: border-box;
+    padding: 0px;
+    top: 0px;
+  }
+  .mexer1{
+    animation: float 4s ease-in-out infinite;
+   
+    float: center;
+  }
+  
+  @keyframes float{
+    0%{
+      transform: translateX(0);
+    }
+    50%{
+      transform: translateX(-10px);
+    }
+    100%{
+      transform: translateX(0);
+    }
+  }
+ a{
+    text-decoration: none;
+    color: #000;
+  }
+ 
+
+  .subtitulo{
+    color: #000;
+    font-size: 1.2rem;
+  }
+ 
+
+  mat-card{
+  
+    transition: 1s ease-in;
+    transform: scale(1);
+    box-shadow: #000;
+  }
+  mat-card:hover{
+   
+    transform: scale(1.05);
+  }
+  .titulo-animado{
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    color: #fff;
+    border-radius: 6px;
+    padding: 3px;
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    cursor: pointer;
+    
+  
+    
+  }
+  .titulo-animado::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background:linear-gradient(45deg, #d7d7d7,#393737,#2005b9,#ec3737,#ea0202);
+    background-size: 50% 100%;
+    border-radius: inherit;
+
+ }
+ .titulo-animado span{
+   display: block;
+   background-color: #000;
+   padding: 20px 30px;
+   border-radius: 3px;
+    z-index: 2;
+  position: relative;
+ }
+  
+.titulo-animado:hover::before{
+  animation: animation_border 1s linear infinite;
+  }
+  @keyframes animation_border{
+    to{
+      transform: translateX(-50%);
+    }
+  }
+  .animado:hover{
+    opacity: 0.5;
+    transform-origin: 15px;
+    transition: 1s ease;
+
+  }
+
+ .carrocel{
+    width: 100%;
+    padding-top: 2rem;
+    bottom: 1rem;
+    display: grid;
+    justify-content: center;
+    transition: 2s ease;
+  }
+  .produtos{
+      display: flex;
+      flex-direction: row;
+    justify-content: space-between;
+    align-items: center
+    ;
+    margin: 5px 2px 2px 4px;
+   height: 500px;
+  }
+  .btn{
+    margin-top: 0.5rem;
+    display: inline;
+  }
+
+  
+  
+  

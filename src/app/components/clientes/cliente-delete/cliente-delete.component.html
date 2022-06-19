@@ -1,0 +1,37 @@
+<mat-card class="tabela mat-elevation-z4">
+    <mat-card-title> Excluir Cliente </mat-card-title>
+   <form class="mat-elevation-z4">
+ 
+        <mat-form-field>
+         <input matInput placeholder="Nome" 
+                     [value]="cliente.nome" name="name"disabled="">
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="E-mail"[value]="cliente.email" name="email" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="cpf"[value]="cliente.cpf" name="cpf" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="endereco"[value]="cliente.endereco" name="endereco" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="celular"[value]="cliente.celular" name="celular" disabled="">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="estado"[value]="cliente.estado" name="estado" disabled="">
+        </mat-form-field>
+
+    
+    </form>
+
+
+<button mat-raised-button class="" (click)="deletarcliente()" color="warn"> Excluir
+
+</button>
+<button  mat-raised-button class="" (click)="cancelcliente()" color=""> Cancelar
+
+</button>
+
+</mat-card>

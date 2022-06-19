@@ -1,0 +1,34 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AccountService } from '../shared/account.service';
+
+@Component({
+  selector: 'app-login-usuario',
+  templateUrl: './login-usuario.component.html',
+  styleUrls: ['./login-usuario.component.css']
+})
+export class LoginUsuarioComponent implements OnInit {
+login = {
+  email: '',
+  password: ''
+};
+constructor(
+  private accountService: AccountService,
+  private router: Router
+) { }
+
+ngOnInit() {
+}
+
+async onSubmit() {
+  try {
+    const result = await this.accountService.login(this.login);
+    console.log(`Login efetuado: ${result}`);
+
+    // navego para a rota vazia novamente
+    this.router.navigate(['']);
+  } catch (error) {
+    console.error(error);
+  }
+}
+}

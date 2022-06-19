@@ -1,0 +1,46 @@
+<div class="escolha">
+
+<h2>Escolha sua forma de pagamento</h2> 
+
+
+
+<google-pay-button class="pagamento ml-10" environment="TEST"
+buttonType="buy"
+buttonColor="black"
+[paymentRequest]="{
+    apiVersion:2,
+    apiVersionMinor: 0,
+    allowedPaymentMethods: [
+      {
+        type: 'CARD',
+      parameters: {
+        allowedAuthMethods: ['PAN_ONLY', 'CRYPTOGRAM_3DS'],
+        allowedCardNetworks: ['AMEX', 'VISA', 'MASTERCARD']
+      },
+      tokenizationSpecification: {
+        type: 'PAYMENT_GATEWAY',
+        parameters: {
+          gateway: 'example',
+          gatewayMerchantId: 'exampleGatewayMerchantId'
+        }
+      }
+    }
+  ],
+  merchantInfo: {
+    merchantId: '12345678901234567890',
+    merchantName: 'Demo Merchant'
+  },
+  transactionInfo: {
+    totalPriceStatus: 'FINAL',
+    totalPriceLabel: 'Total',
+    totalPrice: '100.00',
+    currencyCode: 'USD',
+    countryCode: 'US'
+  }
+}"
+
+(loadpaymentdata)="onLoadPaymentData($event)">
+</google-pay-button>
+<mat-progress-bar mode="determinate"></mat-progress-bar>
+
+</div>
